@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { AppError } from '../src/utils/error/app.error';
-
+import { AppError } from '../utils/error/app.error';
 
 // Error handling middleware function
 const errorHandler = (

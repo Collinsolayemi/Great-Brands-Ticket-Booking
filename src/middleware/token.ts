@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { asyncWrapper } from '../src/utils/error/async.wrapper';
+import { asyncWrapper } from '../utils/error/async.wrapper';
 import {
   NotFoundException,
   UnauthorizedException,
-} from '../src/utils/error/error.utils';
+} from '../utils/error/error.utils';
 
 export class AuthMiddleware {
   private static readonly secretKey = process.env.JWT_SECRET || '';
@@ -40,15 +40,15 @@ export class AuthMiddleware {
 
       const decoded = this.verifyToken(token);
 
-    //   const user = await this.prisma.user.findFirst({
-    //     where: {
-    //       email: decoded.userEmail,
-    //     },
-    //   });
+      //   const user = await this.prisma.user.findFirst({
+      //     where: {
+      //       email: decoded.userEmail,
+      //     },
+      //   });
 
-    //   if (!user) {
-    //     throw new NotFoundException('User not found');
-    //   }
+      //   if (!user) {
+      //     throw new NotFoundException('User not found');
+      //   }
 
       //req.user = user;
       next();

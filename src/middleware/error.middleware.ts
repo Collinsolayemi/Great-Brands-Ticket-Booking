@@ -6,7 +6,7 @@ import {
   UnauthenticatedException,
   UnauthorizedException,
   ValidationException,
-} from '../src/utils/error/error.utils';
+} from '../utils/error/error.utils';
 
 import { Request, Response, NextFunction } from 'express';
 
