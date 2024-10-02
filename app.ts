@@ -3,8 +3,8 @@ import cors from 'cors';
 import * as dotenv from 'dotenv';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-// import { swaggerDefinition } from './swagger';
 import path from 'path';
+import { swaggerDefinition } from './swagger';
 
 const app = express();
 
