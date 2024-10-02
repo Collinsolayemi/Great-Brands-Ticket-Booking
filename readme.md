@@ -24,6 +24,10 @@ A Node.js application for managing ticket bookings for hotel events. This system
 - **Jest**: Testing framework for writing unit and integration tests.
 - **MongoDB Atlas**: Cloud-based database service for storing application data.
 
+
+
+### Getting started
+
 ## Installation
 
 ### Prerequisites
@@ -35,4 +39,20 @@ A Node.js application for managing ticket bookings for hotel events. This system
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Collinsolayemi/Great-Brands-Ticket-Booking.git```
+   git clone https://github.com/Collinsolayemi/Great-Brands-Ticket-Booking.git
+
+
+2. Install dependencies and run build command 
+   
+   ## Running the app
+
+   ```bash
+   # development
+   $ npm run start
+
+   # watch mode
+   $ npm run start:dev
+
+   # production mode
+   $ npm run start:prod
+   ```

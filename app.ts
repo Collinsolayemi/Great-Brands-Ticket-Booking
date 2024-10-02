@@ -35,12 +35,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // Swagger Setup
 const routeFolderPath = path.join(__dirname, '..', 'src', 'route');
-const options = {
-  swaggerDefinition,
-  apis: [path.join(routeFolderPath, '*.ts')],
-};
-const swaggerSpec = swaggerJSDoc(options);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+// const options = {
+//   swaggerDefinition,
+//   apis: [path.join(routeFolderPath, '*.ts')],
+// };
+// const swaggerSpec = swaggerJSDoc(options);
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Routes
 // app.use('/api/v1', authRouter);
