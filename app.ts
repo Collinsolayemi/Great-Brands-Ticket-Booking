@@ -12,35 +12,25 @@ dotenv.config({ path: './.env' });
 
 const port = process.env.PORT || 3000;
 
-// Middleware
-// const corsOptions = {
-//   origin: [
-//     'https://backend.com.endpoint.ng/api/v1',
-//     'http://localhost:3000/api/v1',
-//     'https://sterling-dictionary.onrender.com/api/v1',
-//   ],
-//   optionsSuccessStatus: 200,
-// };
-
-// app.use(cors(corsOptions));
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
+app.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Swagger Setup
 const routeFolderPath = path.join(__dirname, '..', 'src', 'route');
-// const options = {
-//   swaggerDefinition,
-//   apis: [path.join(routeFolderPath, '*.ts')],
-// };
-// const swaggerSpec = swaggerJSDoc(options);
-// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+const options = {
+  swaggerDefinition,
+  apis: [path.join(routeFolderPath, '*.ts')],
+};
+const swaggerSpec = swaggerJSDoc(options);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Routes
 // app.use('/api/v1', authRouter);
