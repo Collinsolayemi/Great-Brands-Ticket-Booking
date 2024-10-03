@@ -39,12 +39,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // app.use(errorMiddleware);
 
 // Initialize Data Source and Start Server
-// AppDataSource.initialize()
-//   .then(async () => {
-//     app.listen(() => {});
-//     console.log('Data Source has been initialized!');
-//   })
-//   .catch((error) => console.log(error));
+AppDataSource.initialize()
+  .then(async () => {
+    app.listen(() => {});
+    console.log('Data Source has been initialized!');
+  })
+  .catch((error) => console.log(error));
 
 // Global Type Declaration for Express Request
 //to add user to the req body globally
