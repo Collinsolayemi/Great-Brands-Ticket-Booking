@@ -5,6 +5,7 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import path from 'path';
 import { swaggerDefinition } from './swagger';
+import { AppDataSource } from './src/datasource/datasource';
 
 const app = express();
 

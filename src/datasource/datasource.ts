@@ -3,7 +3,6 @@ import { DataSource } from 'typeorm';
 
 import * as dotenv from 'dotenv';
 
-
 dotenv.config();
 
 const { DB_HOST, DB_USERNAME, DB_DATABASE, DB_URL, DB_PASSWORD, NODE_ENV } =
